@@ -20,12 +20,15 @@ public class Converter {
         System.out.println("Type inch to convert inches to feet or type sec to convert seconds to hours.");
         selection = scanner.nextLine();
 
-        if(selection.equalsIgnoreCase("inch")){
-            length.lengthConverter();
-        } else if (selection.equalsIgnoreCase("sec")) {
-            time.timeConverter();
-        }else{
-            promptSelection();
+        switch (selection.toLowerCase()){
+            case "inch":
+                length.lengthConverter();
+                break;
+            case "sec":
+                time.timeConverter();
+                break;
+            default:
+                promptSelection();
         }
     }
 
