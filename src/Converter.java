@@ -17,14 +17,14 @@ public class Converter {
 
         String selection;
 
-        System.out.println("Type inch to convert inches to feet or type sec to convert seconds to hours.");
+        System.out.println("Type length to convert inches to feet or type time to convert seconds to hours.");
         selection = scanner.nextLine();
 
         switch (selection.toLowerCase()){
-            case "inch":
+            case "length":
                 length.lengthConverter();
                 break;
-            case "sec":
+            case "time":
                 time.timeConverter();
                 break;
             default:
