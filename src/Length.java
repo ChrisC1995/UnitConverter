@@ -15,10 +15,10 @@ public class Length {
         try {
             System.out.println("How many inches do you want to convert to feet.");
             inches = scanner.nextInt();
-            inchesToFeet = inches / 12;
-            remainingInches = inches % 12;
-            System.out.println(inchesToFeet + " FT. " + remainingInches + " Inches ");
-        }catch(InputMismatchException e){
+            inchesToFeet = inches / 12; //gets the feet.
+            remainingInches = inches % 12; // gets the remaining inches
+            System.out.println(inchesToFeet + " FT. " + remainingInches + " Inches "); //displays the results.
+        }catch(InputMismatchException e){ //catches any exception.
             System.out.println("Invalid input, only enter a whole integer. Try again.");
         }
 

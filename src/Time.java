@@ -12,15 +12,15 @@ public class Time {
     private int remainingSeconds;
 
 
-    public void timeConverter(){
+    public void timeConverter(){ //converts seconds to minutes.
         try{
             System.out.println("How many seconds do you want to convert to minutes.");
             seconds = scanner.nextInt();
-            secondsToMinutes = seconds / 60;
-            remainingSeconds = seconds % 60;
+            secondsToMinutes = seconds / 60; //gets the hours
+            remainingSeconds = seconds % 60; // gets the seconds.
 
-            System.out.println(secondsToMinutes + " Minutes " + remainingSeconds + " Seconds ");
-        }catch (InputMismatchException e){
+            System.out.println(secondsToMinutes + " Minutes " + remainingSeconds + " Seconds "); //displays the results.
+        }catch (InputMismatchException e){ //catches any input mismatch exception.
             System.out.println("Invalid input, only enter a whole integer. Try again");
         }
 

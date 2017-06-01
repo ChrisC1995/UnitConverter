@@ -18,8 +18,7 @@ public class Converter {
         Time time = new Time(); //Instantiated these classes to use their methods to convert.
         Length length = new Length();
         String selection;
-
-
+        
         while(loopChoice){
             System.out.println("Type length to convert inches to feet or type time to convert seconds to hours."); //Prompt to use with the scanner
             selection = scanner.nextLine(); // Sets selection equal to what is inputted into the scanner object.
@@ -40,11 +39,11 @@ public class Converter {
 
     }
 
-    public static void loopQuestion(){
+    private static void loopQuestion(){
         String loopInputSelection;
         System.out.println("Would you like to make another conversion. Input y if yes, input any other letter if no.");
         loopInputSelection = scanner.nextLine();
-        switch (loopInputSelection.toLowerCase()){
+        switch (loopInputSelection.toLowerCase()){ //choice of whether to set looping condition to true or false
             case "y":
                 loopChoice = true;
                 break;
