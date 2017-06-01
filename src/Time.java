@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -12,12 +13,16 @@ public class Time {
 
 
     public void timeConverter(){
-        System.out.println("How many seconds do you want to convert to minutes.");
-        seconds = scanner.nextInt();
-        secondsToMinutes = seconds/60;
-        remainingSeconds = seconds%60;
+        try{
+            System.out.println("How many seconds do you want to convert to minutes.");
+            seconds = scanner.nextInt();
+            secondsToMinutes = seconds / 60;
+            remainingSeconds = seconds % 60;
 
-        System.out.println(secondsToMinutes + " Minutes " + remainingSeconds + " Seconds ");
+            System.out.println(secondsToMinutes + " Minutes " + remainingSeconds + " Seconds ");
+        }catch (InputMismatchException e){
+            System.out.println("Invalid input, only enter a whole integer. Try again");
+        }
 
     }
 }

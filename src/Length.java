@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -11,12 +12,15 @@ public class Length {
     private int remainingInches;
 
     public void lengthConverter(){
-        System.out.println("How many inches do you want to convert to feet.");
-        inches = scanner.nextInt();
-        inchesToFeet = inches/12;
-        remainingInches = inches%12;
-
-        System.out.println(inchesToFeet + " FT. " + remainingInches + " Inches ");
+        try {
+            System.out.println("How many inches do you want to convert to feet.");
+            inches = scanner.nextInt();
+            inchesToFeet = inches / 12;
+            remainingInches = inches % 12;
+            System.out.println(inchesToFeet + " FT. " + remainingInches + " Inches ");
+        }catch(InputMismatchException e){
+            System.out.println("Invalid input, only enter a whole integer. Try again.");
+        }
 
     }
 
